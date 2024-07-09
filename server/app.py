@@ -111,7 +111,7 @@ CORS(app)
 
 # MongoDB Atlas setup
 env_variables = dotenv_values('.env')
-client = MongoClient('mongodb+srv://gaurangraorane:gaurangrao@cluster0.uisyhtp.mongodb.net/dam_data?retryWrites=true&w=majority&appName=Cluster0')
+client = MongoClient(env_variables['MONGODB_URI'])
 db = client['dam_data']
 collection = db['water_levels']
 

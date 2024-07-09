@@ -96,7 +96,7 @@ function App() {
   // }, []);
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/data'); // Adjust port if necessary
+      const response = await axios.get('https://morbe-dam.onrender.com/data'); // Adjust port if necessary
       setData(response.data);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -105,7 +105,7 @@ function App() {
 
   const scrapeData = async () => {
     try {
-      await axios.get('http://localhost:5000/scrape');
+      await axios.get('https://morbe-dam.onrender.com/scrape');
       fetchData(); // Fetch data after scraping
     } catch (error) {
       console.error('Error scraping data:', error);
